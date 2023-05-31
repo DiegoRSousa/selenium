@@ -22,8 +22,9 @@ public class LoginPage {
 		browser.findElement(By.id("password")).sendKeys(password);
 	}
 	
-	public void efetuarLogin() {
+	public LeiloesPage efetuarLogin() {
 		browser.findElement(By.id("login-form")).submit();
+		return new LeiloesPage(browser);
 	}
 	
 	public void navegarParaPaginaDeLances() {
